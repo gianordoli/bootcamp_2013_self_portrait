@@ -8,9 +8,9 @@ Faculty: [Apon Palanuwech](http://apon.io/).
 Summer, 2013.
 
 ***
-![](/img/logo_large.png)
+![Seungkyun Lee](/students/lees100/img.png)
 **Idea/concept**A gallery of self- portraits of the incoming MFA DT students. Users could draw themselves using an online tool and submit a short description.
 The main goal was to build a sort of subjective profile page, instead of the standard picture-data-link.
 The website utilizes html5 canvas and javaScript for the drawing part and php to store the files in a server.
-![](/students/giang063/img.png)![](/students/lewan433/img.png)
+![Apon Palanuwech](/students/palaa159/img.png)
 Check it out [here](a.parsons.edu/~giang063/selfportrait/).
