@@ -1,0 +1,203 @@
+/*---------- PAGES ----------*/
+section{
+	position: absolute;
+	text-align: center;
+}
+
+#home{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFFFFF;
+}
+
+#gallery{
+	left: 100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 120px;
+	/*background: #999999;*/
+}
+
+#draw{
+	left: 200%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+/*	background: #666666;*/
+}
+
+#about{
+	left: 300%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 120px 0px 0px 0px;
+	/*padding-top: 120px;*/
+	background: #FFFFFF;
+}
+
+#thankYou{
+	left: 400%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*padding: 120px 0px 0px 0px;*/
+	padding-top: 120px;
+	/*background: #EEEEEE;*/
+	display: none;
+}
+
+/*---------- STYLES ----------*/
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+html, body {
+    width:      100%;
+    height:     100%;
+    /*overflow:   hidden;*/
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    overflow-y: auto;
+    overflow-x: hidden;    
+}
+
+body > div, body > section {
+    height:     100%;
+/*    overflow:   scroll;*/
+}
+
+header{
+	position: absolute;
+	width: 100%;
+	top: 90px;
+}
+
+p a{
+	font-weight: 400;
+	text-decoration: none;
+	background-color: #DDDDDD;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+nav{
+	width: 732px;
+	position: fixed;
+	top: 0px;
+	/*left: -90px;*/
+	text-align: right;
+	z-index: 4;
+}
+
+hr{
+	height: 1px;
+	color: #AAAAAA;
+	border-style: dashed;
+	/*border: dashed #AAAAAA 1px;*/
+}
+
+input{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	margin-top: 5px;
+	border: solid #AAAAAA 1px;
+	padding: 5px;
+}
+
+textarea{
+	width: 405px;
+	height: 70px;
+	margin-top: 5px;	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;	
+	resize: none;	
+	border: solid #AAAAAA 1px;
+	padding: 5px;	
+}
+
+canvas{
+	border: solid #EEEEEE 1px;
+	border-radius: 400px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: crosshair;
+/*	width: 460px;
+	height: 460px;*/
+}
+canvas:active{
+	cursor: crosshair;
+}
+
+.portrait{
+    width: 200px;
+    height: 200px;
+    margin: 0 10px 0 0;
+    /*border: solid #AAAAAA 1px;*/
+	border-radius: 200px;
+	display: inline-block;    
+}
+
+.imageThumb{
+/*	width: 200px;
+	height: 200px;*/
+}
+
+.subTitle{
+	font-weight: 400;
+}
+
+#homeLink{
+	display: none;
+	/*visibility: hidden;*/
+}
+
+.tools{
+	/*width: 50px;
+	height: 100px;*/
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	display: inline-block;
+	vertical-align: top;
+	/*position: relative;
+	left: 400px;*/
+	/*background-color: #AAAAAA;*/
+	/*z-index: 5;*/
+}
+
+.drawContainer{
+	width: 528px;
+	height: 480px;
+	margin: 120px 0 0 0;
+	padding: 10px;
+	background-color: white;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.drawContainer img{
+	margin-right: 10px;
+}
+
+.aboutContainer{
+	margin: auto;
+	width: 960px;
+}
+
+.aboutTop{
+	width: 225px;
+	display: inline-block;
+	vertical-align: bottom;	
+}
+
+.aboutBottom{
+	width: 225px;
+	display: inline-block;
+	vertical-align: top;	
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootcamp 2013 Self-portrait Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>    
+
+	<link rel="stylesheet" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+<!-- Cabin Google Font... -->
+<!-- 	<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'> -->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- beginning of markup -->
+
+	
+	<section id="home">
+		<header>
+			<img src="img/logo_large.png">
+		</header>
+	</section>
+	
+	<section id="gallery">
+		<div id="galleryContainer">
+		</div>
+	</section>
+
+	<section id="draw">
+		<div class="drawContainer">
+			<p>
+				<img src="img/step1.png" align="left">
+				<span class="subTitle">Type your New School ID.</span> This is just a way to store your data, it won’t be used for any other purpose besides it.<br>
+				<input type="text" id="schoolID" placeholder="Ex.: giang063" required />
+			</p>
+			<hr>
+			<p>
+				<img src="img/step2.png" align="left">
+				<span class="subTitle">Type your name</span> as you want it to appear on the gallery page:<br>
+				<input type="text" id="studentName" placeholder="Ex.: Gabriel" required />
+			</p>
+			<hr>
+			<p>
+				<img src="img/step3.png" align="left">
+				<span class="subTitle">Say something about you.</span> Yes, sorry, 140 characters only.<br>We have some technical constraints here...<br>
+				<textarea id="description" maxlength="140" placeholder="Anything you want!" required ></textarea>
+			</p>
+			<hr>
+			<p>
+				<img src="img/step4.png" align="left">
+				<span class="subTitle">Draw your own self-portrait!</span><br>Use the pencil and eraser tools. <b>Check your data before submitting, there is no way to edit it after that. :S</b>
+			</p>
+		</div><div class="drawContainer">
+			<!-- For some unknown reason, the x and y canvas script will not work properly if its dimensions were not set directly in the tag -->
+			<canvas id="htmlCanvas" width="460" height="460"></canvas>
+			<img class="img-swap" src="img/pencil_on.png">
+			<!-- <img class="img-swap" src="img/tools_eraser.png"> -->
+			<p align="center">
+				<img src="img/done.png" id="ok">
+			</p>			
+		</div>
+
+	</section>
+
+	<section id="about">
+		<div class="aboutContainer">
+			<div class="aboutTop">
+				<img src="img/logo_small.png">
+			</div>
+			<div class="aboutTop">
+				<img src="img/mfadt.png">
+			</div>
+
+			<div class="aboutTop">
+				<img src="img/bootcamp.png">
+			</div>
+
+			<div class="aboutTop">
+				<img src="img/me.png">
+			</div>
+		</div>
+
+		<div class="aboutContainer">
+			<div class="aboutBottom">
+				<p>Each student can express himself through a self-portrait and a short description. The main goal is to create a (sort of) <a href="#gallery">subjective yearbook</a>, instead of the picture-data-link standard description.
+				</p>
+			</div>
+			<div class="aboutBottom">
+				<p>Stands for <a href="http://www.newschool.edu/parsons/mfa-design-technology/ target="_blank"">Master of Fine Arts in Design and Technology</a>, a two-year program from <a href="http://www.newschool.edu/parsons/" target="_blank">Parsons The New School for Design</a>.
+				</p>			
+			</div>			
+			<div class="aboutBottom">
+				<p>It’s a <a href="http://bootcamp.parsons.edu/2013/" target="_blank">3-week pre-orientation intensive program</a> aimed to provide basic skills to the new students, such as web, design, code, eating fast, sleeping less and getting addicted to coffee.
+				</p>			
+			</div>
+			<div class="aboutBottom">
+				<p>My name is Gabriel Gianordoli and this is my final project for the <a href="http://bootcamp.parsons.edu/2013/web/" target="_blank">Bootcamp web class.</a> You can find more information about me here:</p>
+				<a href="http://facebook.com/gianordoli" target="_blank"><img src="img/me_facebook.png"></a>
+				<a href="http://twitter.com/gianordoli" target="_blank"><img src="img/me_twitter.png"></a>
+				<a href="http://br.linkedin.com/pub/gabriel-gianordoli/37/331/934"><img src="img/me_linkedin.png"></a>
+				<a href="http://flickr.com/gianordoli"><img src="img/me_flickr.png"></a>	
+			</div>
+		</div>
+	</section>
+
+	<section id="thankYou">
+		<img src="img/thankyou.png">
+	</section>
+	
+	<nav>
+		<a onclick=goToByScroll("home"); id="homeLink">
+			<img src="img/menu_home.png" class="menu">
+		</a>
+		<a onclick=goToByScroll("gallery");>
+				<img src="img/menu_gallery.png"class="menu">
+		</a>
+		<a onclick=goToByScroll("draw");>
+			<img src="img/menu_draw.png" class="menu">
+		</a>
+		<a onclick=goToByScroll("about");>
+			<img src="img/menu_about.png" class="menu">
+		</a>		
+	</nav>
+
+<!-- Ending of markup -->
+
+<!-- jQuery -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+
+<!-- Lightbox -->
+	<script src="js/lightbox-2.6.min.js"></script>
+	<link href="css/lightbox.css" rel="stylesheet" />
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
