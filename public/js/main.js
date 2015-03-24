@@ -265,19 +265,34 @@ read();
 
 function read(){
 	console.log('called read function');
-	$.ajax({
-	    type: 'get',
-	    url: 'readFolder.php',
-	    success: function(data) {
-	    	console.log(data);
-			idArray = jQuery.parseJSON(data);
-			// Removing 2 itens counting from the 0 index
-			idArray.splice(0,2);
+
+	// Load projects
+	$.post('/public-start', {}, function(response) {
+        // console.log(response);
+        if(response.error){
+        	throw response.error	
+        }else{
+	    	console.log(response);
+			idArray = response.students;
+			// // Removing 2 itens counting from the 0 index
+			// idArray.splice(0,2);
 			clearArray();
-			// createGallery();
-			// createDivs();
-	    }
-	});
+        }
+    });	
+
+	// $.ajax({
+	//     type: 'get',
+	//     url: 'readFolder.php',
+	//     success: function(data) {
+	//     	console.log(data);
+	// 		idArray = jQuery.parseJSON(data);
+	// 		// Removing 2 itens counting from the 0 index
+	// 		idArray.splice(0,2);
+	// 		clearArray();
+	// 		// createGallery();
+	// 		// createDivs();
+	//     }
+	// });
 }
 
 function clearArray(){
