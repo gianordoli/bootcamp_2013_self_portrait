@@ -8,7 +8,7 @@ Faculty: [Apon Palanuwech](http://apon.io/).
 Summer, 2013.
 
 ***
-![Seungkyun Lee](/students/lees100/img.png)
+![Seungkyun Lee](public/students/lees100/img.png)
 
 **Idea/concept**
 A gallery of self- portraits of the incoming MFA DT students. Users could draw themselves using an online tool and submit a short description.
