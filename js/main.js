@@ -264,11 +264,12 @@ var nColumns;
 read();
 
 function read(){
-	console.log('called function');
+	console.log('called read function');
 	$.ajax({
 	    type: 'get',
 	    url: 'readFolder.php',
 	    success: function(data) {
+	    	console.log(data);
 			idArray = jQuery.parseJSON(data);
 			// Removing 2 itens counting from the 0 index
 			idArray.splice(0,2);
@@ -280,6 +281,7 @@ function read(){
 }
 
 function clearArray(){
+	console.log('called clear array function');
 	for(var i = 0; i < idArray.length; i ++){
 		if(idArray[i] == 'a' || idArray[i] == 'b'){
 			idArray.splice(i, 1);
@@ -289,6 +291,7 @@ function clearArray(){
 }
 
 function createGallery(){
+	console.log('called createGallery function');
 	// Calculating the number of columns of the gallery
 	// 120 = padding-top
 	nColumns = Math.sqrt(idArray.length*(screenWidth-40)/(screenHeight-120));
@@ -298,6 +301,8 @@ function createGallery(){
 }
 
 function createDivs(){
+	console.log('called createDivs function');
+
 	var divWidth = (screenWidth-40)/nColumns;
 
 	for(var i = 0; i < idArray.length; i ++){
@@ -312,6 +317,9 @@ function createDivs(){
 }
 
 function display(){
+
+	console.log('called display function');
+
 	$('.portrait').each(function(i){
 
 // <a href="img/logo_large.png" data-lightbox="image-1" title="My caption">
