@@ -378,28 +378,34 @@ function display(){
 
 $('#ok').click(function(){
 
-	if($('#schoolID').val().length > 3
-	   && $('#studentName').val().length > 3
-	   && $('#description').val().length > 10
-	   && localStorage.getItem('isSubmitted') != 1){
+	// alert("This Yearbook is closed! You can't submit your info/drawing to the gallery, but feel free to draw something if you want. hit the 'DONE' button to save your drawing.");	
 
-		createFolder();
-		localStorage.setItem('isSubmitted', 1); 
+	var dataURL = document.getElementsByTagName("canvas")[0].toDataURL("image/png");
+	var newWindow = window.open();
+	newWindow.document.write('<img src="'+dataURL+'"/>');
 
-		// $('#thankYou').css({
-		// 	'display': 'visible'
-		// });
-		$('#thankYou').fadeIn();
+	// if($('#schoolID').val().length > 3
+	//    && $('#studentName').val().length > 3
+	//    && $('#description').val().length > 10
+	//    && localStorage.getItem('isSubmitted') != 1){
 
-		$(document).scrollTop($('#thankYou').offset().left);
-		setTimeout(function(){
-			// window.location = 'http://a.parsons.edu/~giang063/selfportrait/#gallery';
-			// location.reload();
-			window.open('http://a.parsons.edu/~giang063/selfportrait', '_self');
-		}, 5000);
-	}else{
-		alert('Oops, there is somethig wrong! Maybe you haven\'t \n filled all the fields or your description is too short... \n Or maybe you\'ve already submitted something!');
-	}
+	// 	createFolder();
+	// 	localStorage.setItem('isSubmitted', 1); 
+
+	// 	// $('#thankYou').css({
+	// 	// 	'display': 'visible'
+	// 	// });
+	// 	$('#thankYou').fadeIn();
+
+	// 	$(document).scrollTop($('#thankYou').offset().left);
+	// 	setTimeout(function(){
+	// 		// window.location = 'http://a.parsons.edu/~giang063/selfportrait/#gallery';
+	// 		// location.reload();
+	// 		window.open('http://a.parsons.edu/~giang063/selfportrait', '_self');
+	// 	}, 5000);
+	// }else{
+	// 	alert('Oops, there is somethig wrong! Maybe you haven\'t \n filled all the fields or your description is too short... \n Or maybe you\'ve already submitted something!');
+	// }
 });
 
 function createFolder(){
